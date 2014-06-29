@@ -1,0 +1,8 @@
+BeeCloud iOS SDK Changelog
+==========================
+
+v0.1-alpha  2014年6月28日
+
++ 初始发布BeeCloud.framework.
++ 包括BCObject, BCQuery核心功能.
+
