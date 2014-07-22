@@ -1,6 +1,14 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v0.5-beta  2014年7月21日
+
++ 发布BCLocation.
++ BCObject位置类型数据的存取与修改.
++ BCQuery地理空间功能.
++ BCQuery按多列排序功能.
+
+
 v0.1-alpha  2014年6月28日
 
 + 初始发布BeeCloud.framework.
