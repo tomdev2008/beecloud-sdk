@@ -1,6 +1,11 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v0.6-beta  2014年8月4日
+
++ BCLocation设计优化.
++ BCObject改进.
+
 v0.5-beta  2014年7月21日
 
 + 发布BCLocation.
