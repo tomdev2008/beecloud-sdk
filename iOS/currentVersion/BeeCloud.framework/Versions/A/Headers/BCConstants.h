@@ -12,7 +12,7 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersion = @"0.5-beta";
+static NSString * const kBeeCloudVersion = @"0.6-beta";
 
 /**
  *  Supported data types for BCObject.
@@ -126,5 +126,30 @@ typedef void (^BCObjectResultBlock)(BCObject *object, NSError *error);
  *  @param error   Carries error if there is one, or nil otherwise.
  */
 typedef void (^BCIdResultBlock)(id object, NSError *error);
+
+/**
+ *  Result block for purchase or restore result.
+ *
+ *  @param productId purchased or restored product id
+ *  @param state     purchase state : 0 for succeeded, 1 for failed, 2 for restored
+ *  @param error     error enum could be :
+ SKErrorUnknown,
+ SKErrorClientInvalid,               // client is not allowed to issue the request, etc.
+ SKErrorPaymentCancelled,            // user cancelled the request, etc.
+ SKErrorPaymentInvalid,              // purchase identifier was invalid, etc.
+ SKErrorPaymentNotAllowed,           // this device is not allowed to make the payment
+ SKErrorStoreProductNotAvailable,    // Product is not available in the current storefront
+ 
+ */
+typedef void (^BCPurchaseBlock)(NSString *productId, NSInteger state, NSError *error);
+
+/**
+ *  Result block for init products result.
+ *
+ *  @param products inited products
+ *  @param failedIds failed productIds
+ *  @param error    error
+ */
+typedef void (^BCProductBlock)(NSArray *products, NSArray *failedIds, NSError *error);
 
 #endif

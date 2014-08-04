@@ -22,7 +22,7 @@
  *  Each object can be considered as a row in MySQL table and this class name is the table name. All classNames are
  *  lower case strings.
  */
-@property (nonatomic, strong) NSString *className;
+@property (nonatomic, strong, readonly) NSString *className;
 
 /*!
  The object ID is a unique ID bound to this object, which looks like "BE5BA3D0-971C-4418-9ECF-E2D1ABCB66BE", it is
@@ -111,13 +111,17 @@
  */
 - (NSArray *)userKeys;
 
-/*!
- Returns the object associated with a given key. The key is case-insensitive, i.e., "game" and "GAME" all point to the
- same object. The key is a letter followed by any sequence of letters, digits, or the underscore (_). The key ending
- with two underscores, such as "key__" are not permitted.
- @param key The key that the column is associated with.
- @return Returns the value associated with the given key, or nil if the key is not present or even if the key is
- present, no value is associated.
+/**
+ *  Returns the object associated with a given key. The key is case-insensitive, i.e., "game" and "GAME" all point to
+ *  the same object. The key is a letter followed by any sequence of letters, digits, or the underscore (_). The key
+ *  ending with two underscores, such as "key__" are not permitted.
+ *
+ *  @param key The key that the column is associated with.
+ *
+ *  @return The value associated with the given key, or nil if the key is not present or even if the key is present, no
+ *          value is associated with it. Notice that for bool and number data types, the returned object is a NSNumber
+ *          object, and you need to use the corresponding data methods to access the numerical value, such as
+ *          [nsNumberObject boolValue].
  */
 - (id)objectForKey:(NSString *)key;
 
