@@ -1,6 +1,11 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v0.7-beta  2014年8月9日
+
++ BCConfig云设置组建发布.
+
+
 v0.6-beta  2014年8月4日
 
 + BCLocation设计优化.

@@ -5,6 +5,7 @@
 //  Copyright (c) 2014 BeeCloud Inc. All rights reserved.
 //
 
+#import "BCConfig.h"
 #import "BCConstants.h"
 #import "BCLocation.h"
 #import "BCObject.h"

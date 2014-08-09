@@ -41,6 +41,15 @@
 + (BCLocation *)locationWithLatitude:(double)latitude longitude:(double)longitude;
 
 /**
+ *  Creates a new BCLocation object with the given coordiante string in the format of "latitude,longitude".
+ *
+ *  @param string The given coordinate string in the format of "latitude,longitude".
+ *
+ *  @return New location object with the given latitude and longitude.
+ */
++ (BCLocation *)locationWithString:(NSString *)string;
+
+/**
  *  Get distance in meters from this location to the given location.
  *
  *  @param location Location of the other point.
