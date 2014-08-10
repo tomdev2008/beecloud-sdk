@@ -11,6 +11,7 @@
 #import "BCObject.h"
 #import "BCQuery.h"
 #import "BCUtil.h"
+#import "BCPay.h"
 
 /**
  *  Global configuration and control methods for BeeCloud.

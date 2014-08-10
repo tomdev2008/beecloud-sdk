@@ -256,7 +256,7 @@
 
 /**
  *  Initiates an empty array object for the given key.
- * 
+ *
  *  @warning This function is not fully complete yet, please use them after they are completed in later releases.
  *
  *  @param key  The associated column key.
