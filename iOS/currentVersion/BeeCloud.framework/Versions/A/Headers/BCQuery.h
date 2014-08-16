@@ -170,6 +170,9 @@
  *  results will be first sorted based on key1 and when key1 contains the same value, key2 is used for ordering. At most
  *  5 different keys can be called consequtively to order results.
  *
+ *  For performance concerns, orderByDistanceToLocation and the other two orderBy are mutlally exclusive. For example,
+ *  you should not call orderByDistanceToLocation first and then orderByAscending/orderByDescending, nor the opposite.
+ *
  *  @param key The key to order by.
  */
 - (void)orderByAscending:(NSString *)key;
@@ -179,14 +182,18 @@
  *  the results will be first sorted based on key1 and when key1 contains the same value, key2 is used for ordering. At
  *  most 5 different keys can be called consequtively to order results.
  *
+ *  For performance concerns, orderByDistanceToLocation and the other two orderBy are mutlally exclusive. For example,
+ *  you should not call orderByDistanceToLocation first and then orderByAscending/orderByDescending, nor the opposite.
+ *
  *  @param key The key to order by.
  */
 - (void)orderByDescending:(NSString *)key;
 
 /**
- *  Sort the results by distance to a base location with shortest distance appearing first. If you call order by key1,
- *  and then call order by key2, the results will be first sorted based on key1 and when key1 contains the same value,
- *  key2 is used for ordering. At most 5 different keys can be called consequtively to order results.
+ *  Sort the results by distance to a base location with shortest distance appearing first. 
+ *  
+ *  For performance concerns, orderByDistanceToLocation and the other two orderBy are mutlally exclusive. For example,
+ *  you should not call orderByDistanceToLocation first and then orderByAscending/orderByDescending, nor the opposite.
  *
  *  @param base The base Location to compute distance.
  *  @param key  Key of the column which must be of type BCLocation.
