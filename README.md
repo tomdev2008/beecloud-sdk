@@ -1,5 +1,7 @@
 # BeeCloud 蜂云
 
+[![BeeCloud Logo](http://beecloud.cn/image/banner.jpg)](http://beecloud.cn/)
+
 BeeCloud蜂云为移动App开发者提供便捷的海量数据存储解决方案。从开始注册，到集成代码，几分钟足够，快来免费试用吧。
 
 欢迎访问我们的[官方网站](http://beecloud.cn)。
