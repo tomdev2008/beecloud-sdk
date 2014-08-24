@@ -8,6 +8,8 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+#import "BCConstants.h"
+
 /**
  *  A class to represent a location in the map with latitude and longitude.
  */
@@ -54,6 +56,42 @@
  *  @return New location object with the given latitude and longitude, or nil if input is not valid.
  */
 + (BCLocation *)locationWithString:(NSString *)string;
+
+/**
+ *  Get user's current location based on system's location information. If users choose not to share the accurate GPS
+ *  information, the public IP address of the user will be used to infer the coarse-grained location of the user with
+ *  city-level accuracy.
+ *
+ *  This method returns immediately and does not block.
+ *
+ *  @return Location object of the user's current location, or an empty location with latitude, longitude being 0 if
+ *          failed.
+ */
++ (BCLocation *)getCurrentLocation;
+
+/**
+ *  Get the coarse-grained location based on the given IP address.
+ *
+ *  This method is a synchronous network call and blocks until the network request is complete.
+ *
+ *  @param ip Input IP address, if nil, the current device's public IP address will be used.
+ *
+ *  @return Location object of the user's current location, or an empty location with latitude, longitude being 0 if
+ *          failed.
+ */
++ (BCLocation *)getLocationByIp:(NSString *)ip;
+
+/**
+ *  Get the coarse-grained location based on the given IP address.
+ *
+ *  This method is a asynchronous network call and does not block.
+ *
+ *  @param ip    Input IP address, if nil, the current device's public IP address will be used.
+ *  @param block The block to execute. The block should have the following argument signature:
+ *               (BCLocation *location, NSError *error)
+ *               The location is nil if there is an error.
+ */
++ (void)getLocationByIpInBackground:(NSString *)ip block:(BCLocationResultBlock)block;
 
 #pragma mark - Calculating distance to another location
 /** @name Calculating Distance to Another Location */

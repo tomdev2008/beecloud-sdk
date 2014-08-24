@@ -12,7 +12,7 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersion = @"1.0";
+static NSString * const kBeeCloudVersion = @"1.1";
 
 /**
  *  Supported data types for BCObject.
@@ -86,6 +86,7 @@ typedef NS_ENUM(NSInteger, BCDataType) {
 static NSString * const kBCDateFormat = @"yyyy-MM-dd HH:mm:ss.SSS ZZZZ";
 
 @class BCObject;
+@class BCLocation;
 
 /**
  *  Result block for boolean result.
@@ -114,10 +115,18 @@ typedef void (^BCArrayResultBlock)(NSArray *objects, NSError *error);
 /**
  *  Result block for BCObject result.
  *
- *  @param objects BCObject result.
- *  @param error   Carries error if there is one, or nil otherwise.
+ *  @param object BCObject result.
+ *  @param error  Carries error if there is one, or nil otherwise.
  */
 typedef void (^BCObjectResultBlock)(BCObject *object, NSError *error);
+
+/**
+ *  Result block for BCLocation result.
+ *
+ *  @param location BCLocation result.
+ *  @param error    Carries error if there is one, or nil otherwise.
+ */
+typedef void (^BCLocationResultBlock)(BCLocation *location, NSError *error);
 
 /**
  *  Result block for id result.
