@@ -11,7 +11,7 @@
 #import "BCConstants.h"
 
 /**
- *  <#Description#>
+ *  BCPay framework provides handy APIs for in-app purchase, and other payment options to come.
  */
 @interface BCPay : NSObject<SKProductsRequestDelegate>
 
@@ -93,6 +93,7 @@
  *  @param error   error
  */
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error;
+
 /**
  *  A method to get a product entity by productId
  *

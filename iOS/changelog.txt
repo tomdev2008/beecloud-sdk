@@ -1,6 +1,10 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v1.2  2014年8月26日
++ BCPay支付服务发布.
++ BCAnalysis功能改进.
+
 v1.1  2014年8月23日
 + BCAnalysis统计分析框架发布，包含app启动，停止与事件记录功能.
 + BCLocation新增查询当前地址功能.

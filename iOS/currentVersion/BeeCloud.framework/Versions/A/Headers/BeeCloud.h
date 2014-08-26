@@ -10,6 +10,7 @@
 #import "BCConstants.h"
 #import "BCLocation.h"
 #import "BCObject.h"
+#import "BCPay.h"
 #import "BCQuery.h"
 #import "BCUtil.h"
 
