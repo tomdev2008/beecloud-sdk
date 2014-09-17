@@ -13,35 +13,44 @@
 @interface BCAnalysis : NSObject
 
 /**
- *  Log app start event. Call this method inside "- (void)applicationDidBecomeActive:(UIApplication *)application" in
- *  the main app delegate.
+ *  If your app requires user login, call this method whenever a user is successfully authenticated. This will help us
+ *  provide you better user analysis.
  *
- *  @param user User ID, or nil if it can not be determined.
- *  @param note Optional note for debugging information, or nil if nothing to specify.
- *
+ *  @param userId User ID in the environment of your app, it could be email, or any other unique ID to identify this
+ *                user.
  */
-+ (void)logAppStartForUser:(NSString *)user note:(NSString *)note;
++ (void)setUserId:(NSString *)userId;
 
 /**
- *  Log app end event. Call this method inside "- (void)applicationWillResignActive:(UIApplication *)application" in the
- *  main app delegate.
+ *  Tells us whether this user is paid user, if possible.
  *
- *  @param user User ID, or nil if it can not be determined.
- *  @param note Optional note for debugging information, or nil if nothing to specify.
- *
+ *  @param isPaidUser YES if this user is paid user; NO otherwise.
  */
-+ (void)logAppEndForUser:(NSString *)user note:(NSString *)note;
++ (void)setIsPaidUser:(BOOL)isPaidUser;
+
+/**
+ *  Tells us whether this user is male, if possible.
+ *
+ *  @param isMale YES if this user is male; NO otherwise.
+ */
++ (void)setUserGender:(BOOL)isMale;
+
+/**
+ *  Tells us the age of this user, e.g., 15.5, if possible
+ *
+ *  @param age Age in the number of years.
+ */
++ (void)setUserAge:(double)age;
 
 /**
  *  Log an event. For the event that user A clicked "like" on image B, the entity is B and event could be "like_image".
  *
  *  @param event  Event name, such as "posting_photo", which should not be nil.
- *  @param user   User ID, or nil if it can not be determined.
  *  @param entity Target entity ID of this event, e.g., the image ID of a user viewing image event, or nil if nothing to
  *                specify.
  *  @param note   Optional note for debugging information, or nil if nothing to specify.
  *
  */
-+ (void)logEvent:(NSString *)event user:(NSString *)user entity:(NSString *)entity note:(NSString *)note;
++ (void)logEvent:(NSString *)event towardsEntity:(NSString *)entity withNote:(NSString *)note;
 
 @end

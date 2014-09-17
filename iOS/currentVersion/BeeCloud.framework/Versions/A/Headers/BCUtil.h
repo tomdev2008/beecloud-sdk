@@ -14,6 +14,48 @@
 @interface BCUtil : NSObject
 
 /**
+ *  Get the current CFBundle version of this app.
+ *
+ *  @return App version string.
+ */
++ (NSString *)getAppVersion;
+
+/**
+ *  Get vendor ID of this device.
+ *
+ *  @return Vendor ID of this device, which might change if the app is reinstalled.
+ */
++ (NSString *)getDeviceId;
+
+/**
+ *  Get device type of this device, e.g., @"iPhone", @"iPod touch".
+ *
+ *  @return Device type of this device.
+ */
++ (NSString *)getDeviceType;
+
+/**
+ *  Get the current network type.
+ *
+ *  @return The current network type.
+ */
++ (NSString *)getNetworkType;
+
+/**
+ *  Get the carrier name, such as "AT&T", "中国移动", etc.
+ *
+ *  @return The carrier name.
+ */
++ (NSString *)getCarrierName;
+
+/**
+ *  Get the current battery level, from 0.0 to 1.0. -1 indicating error.
+ *
+ *  @return The current battery level.
+ */
++ (float)getBatteryLevel;
+
+/**
 *  Generate a random UUID in the format of "550e8400-e29b-41d4-a716-446655440000", in lower case.
 *
 *  @return The generated UUID string in lower case.

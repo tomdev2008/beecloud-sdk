@@ -1,6 +1,11 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v1.5  2014年9月17日
++ BCAnalysis统计支持用户信息统计.
++ BCAnalysis自动记录app启动和退出.
++ BCUtil增加用户信息获取接口.
+
 v1.2  2014年8月26日
 + BCPay支付服务发布.
 + BCAnalysis功能改进.
