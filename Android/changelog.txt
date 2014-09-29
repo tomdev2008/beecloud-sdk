@@ -1,0 +1,6 @@
+BeeCloud Android SDK Changelog
+==========================
+
+v0.1-alpha  2014年9月29日
++ 初始发布BeeCloud Android SDK.
++ 包括BCObject, BCQuery核心功能.
