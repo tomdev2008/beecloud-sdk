@@ -8,6 +8,8 @@
 #import "BCAnalysis.h"
 #import "BCConfig.h"
 #import "BCConstants.h"
+#import "BCFile.h"
+#import "BCFileManager.h"
 #import "BCLocation.h"
 #import "BCObject.h"
 #import "BCPay.h"

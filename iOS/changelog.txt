@@ -1,6 +1,10 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v1.6  2014年10月9日
++ BCFile与BCFileManager发布.
++ BCFileManager支持上传文件至七牛.
+
 v1.5  2014年9月17日
 + BCAnalysis统计支持用户信息统计.
 + BCAnalysis自动记录app启动和退出.

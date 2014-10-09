@@ -12,7 +12,7 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersion = @"1.5";
+static NSString * const kBeeCloudVersion = @"1.6";
 
 /**
  *  Supported data types for BCObject.
@@ -78,6 +78,28 @@ typedef NS_ENUM(NSInteger, BCDataType) {
      *  Error type indicating that the data type is not yet supported by the cloud.
      */
     BCDataTypeUnsupported
+};
+
+/**
+ *  Status of a BCFile object.
+ */
+typedef NS_ENUM(NSInteger, BCFileStatus) {
+    /**
+     *  Default status, indicating the file has not been uploaded yet.
+     */
+    BCFileStatusDefault,
+    /**
+     *  File is being uploaded.
+     */
+    BCFileStatusUploading,
+    /**
+     *  Upload succeeded.
+     */
+    BCFileStatusUploadSuccess,
+    /**
+     *  Upload failed.
+     */
+    BCFileStatusUploadFailure,
 };
 
 /**
