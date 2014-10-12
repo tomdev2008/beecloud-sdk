@@ -1,6 +1,11 @@
 BeeCloud Android SDK Changelog
 ==========================
 
+v0.2  2014年10月12日
++ 改进初始化设置
++ 发布BCLocation
++ 发布BCConfig云设置组件
+
 v0.1  2014年9月29日
 + 初始发布BeeCloud Android SDK.
 + 包括BCObject, BCQuery核心功能.
