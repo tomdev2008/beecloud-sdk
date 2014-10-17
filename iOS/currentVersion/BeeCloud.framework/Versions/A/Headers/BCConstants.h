@@ -12,7 +12,7 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersion = @"1.6";
+static NSString * const kBeeCloudVersion = @"1.7";
 
 /**
  *  Supported data types for BCObject.

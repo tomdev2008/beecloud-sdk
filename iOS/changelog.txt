@@ -1,6 +1,10 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v1.7  2014年10月17日
++ 自动根据网络速度选择连接中国/美国服务器节点.
++ 如果服务器出现down机，自动重连可用的服务器.
+
 v1.6  2014年10月9日
 + BCFile与BCFileManager发布.
 + BCFileManager支持上传文件至七牛.
