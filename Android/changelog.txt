@@ -1,6 +1,10 @@
 BeeCloud Android SDK Changelog
 ==========================
 
+v0.5  2014年10月23日
++ 发布BCAnalysis统计分析组件
++ 发布BCUtil功能组件
+
 v0.2  2014年10月12日
 + 改进初始化设置
 + 发布BCLocation
