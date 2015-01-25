@@ -99,7 +99,6 @@
  */
 + (NSString *)dateToString:(NSDate *)date;
 
-
 /**
  *  Converts a common string to MD5.
  *
@@ -165,7 +164,6 @@
  */
 + (BOOL)isValidUUID:(NSString *)uuid;
 
-
 /**
  *  Check the validness of a String
  *
@@ -175,6 +173,22 @@
  */
 + (BOOL)isValidString:(NSString *)str;
 
+/**
+ *  Check whether the string is pure Numbers
+ *
+ *  @param str Str
+ *
+ *  @return YES if the string is pure Numbers.
+ */
++ (BOOL)isPureInt:(NSString *)str;
 
+/**
+ *  get IP address
+ *
+ *  @param preferIPv4 preferIPv4
+ *
+ *  @return return valid IP address or "0.0.0.0"
+ */
++ (NSString *)getIPAddress:(BOOL)preferIPv4;
 
 @end

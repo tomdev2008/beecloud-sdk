@@ -98,6 +98,28 @@ typedef NS_ENUM(NSInteger, BCFileStatus) {
 };
 
 /**
+ * Status of a payment
+ */
+typedef NS_ENUM(NSInteger, BCPayStatus) {
+    /**
+     *  Pay succeeded
+     */
+    BCPayStatusSuccess,
+    /**
+     *  Pay failed.
+     */
+    BCPayStatusFailure,
+    /**
+     *  Pay cancel.
+     */
+    BCPayStatusCancel,
+    /**
+     *  Pay invalid.
+     */
+    BCPayStatusInvalid,
+};
+
+/**
  Date format with millisecond accuracy. Example: "2014-02-25 14:27:44.037 GMT-08:00".
  */
 static NSString * const kBCDateFormat = @"yyyy-MM-dd HH:mm:ss.SSS ZZZZ";
@@ -172,10 +194,20 @@ typedef void (^BCPurchaseBlock)(NSString *productId, NSInteger state, NSError *e
 /**
  *  Result block for init products result.
  *
- *  @param products inited products
- *  @param failedIds failed productIds
- *  @param error    error
+ *  @param products  Inited products
+ *  @param failedIds Failed productIds
+ *  @param error     Error
  */
 typedef void (^BCProductBlock)(NSArray *products, NSArray *failedIds, NSError *error);
+
+
+/// TODO(hwl): 将success\fail\cancel\invalid\ 定义成NS_ENUM, 参考BCDataType
+/**
+ *  Result block for pay result.
+ *
+ *  @param result Pay result, success\fail\cancel\invalid
+ *  @param error  Error
+ */
+typedef void (^BCPayBlock)(NSString *strMsg, NSError *error);
 
 #endif

@@ -20,6 +20,10 @@
  *
  *  Notice that no two configs share the same name, even when they have different types, for avoiding confusion. Config
  *  names are case in-sensitive.
+ *
+ *  TODO: read multiple configs in one shot. Multiple configs may have multiple TTLs and each one of them will be
+ *  respected respectively. This can optimize the network usage of reading multiple configs into 1 or even 0 round-trip 
+ *  communications with the server.
  */
 @interface BCConfig : NSObject
 
