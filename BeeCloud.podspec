@@ -6,13 +6,13 @@ Pod::Spec.new do |s|
 
   s.homepage     = "http://beecloud.cn"
 
-  s.license      = "MIT"
+  s.license      = {:type => 'MIT'}
 
   s.author       = "http://beecloud.cn"
 
   s.platform     = :ios
 
-  s.source       = { :git =>"https://github.com/beecloud/beecloud-sdk.git", :tag => 'v2.1'}
+  s.source       = { :git =>"https://github.com/beecloud/beecloud-sdk.git", :tag => 'v2.1.0'}
   s.source_files  = "iOS/v2.1/BeeCloud.framework/*"
   #s.source       = { :http => "http://beecloud.cn/download/file/BeeCloud.framework.v2.1.zip"}
 
