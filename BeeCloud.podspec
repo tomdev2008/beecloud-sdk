@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git =>"https://github.com/beecloud/beecloud-sdk.git", :tag => 'v2.1.0'}
   s.source_files  = "iOS/v2.1/BeeCloud.framework/*", "iOS/v2.1/BeeCloud.framework/**/*"
+  s.public_header_files = "iOS/v2.1/BeeCloud.framework/Headers/*.h"
 
   s.frameworks  = "CoreGraphics","CoreLocation","MobileCoreServices","Security","SystemConfiguration","UIKit","CoreTelephony"
   s.libraries    = "sqlite3","c++","z"
