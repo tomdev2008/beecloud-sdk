@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.source_files  = "iOS/v2.1/BeeCloud.framework/*", "iOS/v2.1/BeeCloud.framework/**/*"
 
   s.frameworks  = "CoreGraphics","CoreLocation","MobileCoreServices","Security","SystemConfiguration","UIKit","CoreTelephony"
+  s.libraries    = "sqlite3","c++","z"
 
   s.requires_arc = true
 
