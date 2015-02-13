@@ -32,7 +32,9 @@ static double const kBeeCloudVersionNumber = 2.1;
 
 /**
  *  Set the app key obtained after registering this app in BeeCloud website. Also takes care of all initialization tasks
- *  for different BC service. This must be called before using any BeeCloud functions.
+ *  for different BeeCloud services. This must be called before using any BeeCloud functions.
+ *
+ *  Notice that this function returns immediately and does not block the UI thread.
  *
  *  @param key App Key obtained from BeeCloud website.
  */

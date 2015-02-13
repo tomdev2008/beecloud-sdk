@@ -10,7 +10,8 @@
 #import "BCObject.h"
 
 @interface BCUser : BCObject
-
+/** @name Class Property */
+ 
 /*!
  The session token for the BCUser. This is set by the server upon successful authentication.
  */
@@ -33,7 +34,7 @@
 @property (nonatomic, strong) NSString *email;
 
 #pragma mark - Create new user
-/** @name Creating a New User */
+/** @name Creating A New User */
 
 /**
  *  Creates a new BCUser object, with a randomly generated userId.
@@ -77,7 +78,7 @@
 - (instancetype)initWithObjectId:(NSString *)objectId;
 
 #pragma mark - sign up
-/** @name sign up */
+/** @name Sign Up */
 
 /**
  *  Signs up the user. Make sure that password and email are set. This requires that the email isn't already taken.
@@ -143,7 +144,7 @@ already taken.
 + (void)checkEmailAvailability:(NSString *)email withBlock:(BCBooleanResultBlock)block;
 
 #pragma mark - Accessing current user
-/** @name Accessing the Current User */
+/** @name Accessing The Current User */
 
 /**
  *  Gets the currently logged in user and returns an instance of it.

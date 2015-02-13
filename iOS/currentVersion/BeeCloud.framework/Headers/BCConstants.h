@@ -94,29 +94,49 @@ typedef NS_ENUM(NSInteger, BCFileStatus) {
     /**
      *  Upload failed.
      */
-    BCFileStatusUploadFailure,
+    BCFileStatusUploadFailure
 };
 
 /**
- * Status of a payment
+ * Pay channel&action.WeChatPay,AliPay,IAP,UnionPay...
  */
-typedef NS_ENUM(NSInteger, BCPayStatus) {
+typedef NS_ENUM(NSInteger, BCPayOrderType) {
     /**
-     *  Pay succeeded
+     *  IAP
      */
-    BCPayStatusSuccess,
+    BCPayIAP,
     /**
-     *  Pay failed.
+     *  WeChat.
      */
-    BCPayStatusFailure,
+    BCPayWxPay,
+    BCPayWxRefund,
     /**
-     *  Pay cancel.
+     *  AliPay.
      */
-    BCPayStatusCancel,
+    BCPayAliPay,
+    BCPayAliRefund,
     /**
-     *  Pay invalid.
+     *  UnionPay.
      */
-    BCPayStatusInvalid,
+    BCPayUPPay,
+    BCPayUPRefund
+};
+/**
+ *  Query pay or refund order by some key
+ */
+typedef NS_ENUM(NSInteger, BCPayOrderKey) {
+    /**
+     *  trace_id
+     */
+    OrderKeyTraceID,
+    /**
+     *  out_trade_no
+     */
+    OrderKeyOutTradeNo,
+    /**
+     *  out_refund_no
+     */
+    OrderKeyOutRefundNo
 };
 
 /**
@@ -200,6 +220,14 @@ typedef void (^BCPurchaseBlock)(NSString *productId, NSInteger state, NSError *e
  */
 typedef void (^BCProductBlock)(NSArray *products, NSArray *failedIds, NSError *error);
 
+/**
+ *  Result block for save purchase or restore record.
+ *
+ *  @param transaction  transaction
+ *  @param error     Error
+ */
+typedef void (^BCIAPRecordBlock)(id transaction, NSError *error);
+
 
 /// TODO(hwl): 将success\fail\cancel\invalid\ 定义成NS_ENUM, 参考BCDataType
 /**
@@ -208,6 +236,6 @@ typedef void (^BCProductBlock)(NSArray *products, NSArray *failedIds, NSError *e
  *  @param result Pay result, success\fail\cancel\invalid
  *  @param error  Error
  */
-typedef void (^BCPayBlock)(NSString *strMsg, NSError *error);
+typedef void (^BCPayBlock)(BOOL success, NSString *strMsg, NSError *error);
 
 #endif
