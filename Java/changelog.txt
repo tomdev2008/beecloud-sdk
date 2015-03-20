@@ -1,0 +1,7 @@
+BeeCloud Java SDK Changelog
+==========================
+
+v1.0  2015年3月20日
++ BeeCloud秒支付支付宝支付发布
++ BeeCloud云数据库功能发布
++ BeeCloud地理信息功能发布
