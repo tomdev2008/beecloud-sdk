@@ -1,6 +1,10 @@
 BeeCloud iOS SDK Changelog
 ==========================
 
+v2.4.1 2015年3月26日
++ 修复支付optional参数传nil,crash的bug
++ 增加log开关
+
 v2.4  2015年3月24日
 + 支付接口optional扩展功能
 + 增加支付回调URL类型判断接口
