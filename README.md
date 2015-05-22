@@ -8,7 +8,7 @@ BeeCloud为移动App开发者提供便捷的支付解决方案。从开始注册
 
 # BeeCloud 链接
 
-* [注册](http://beecloud.cn/register.php)／[登陆](http://beecloud.cn/login.php)
+* [注册](http://beecloud.cn/register)／[登陆](http://beecloud.cn/login)
 * [开发文档](http://beecloud.cn/doc/)
 
 # 联系我们
